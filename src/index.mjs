@@ -9,7 +9,7 @@ const router = Router();
 router
 //  .all("*", preflight) // handle CORS preflight/OPTIONS requests
   .get("/version", () => json({ version: "0.1.0" }))
-  .get("/", authorize)
+  .post("/", authorize)
   .all("*", () => missing("Are you sure about that?"));
 
 export default function fetch(...args) {
