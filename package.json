@@ -33,5 +33,10 @@
       "arlac77/template-esm-only",
       "arlac77/template-wrangler"
     ]
+  },
+  "dependencies": {
+    "itty-cors": "^0.3.5",
+    "itty-router": "^3.0.11",
+    "itty-router-extras": "^0.4.2"
   }
 }
