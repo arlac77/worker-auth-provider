@@ -9,20 +9,15 @@ const router = Router();
 router
 //  .all("*", preflight) // handle CORS preflight/OPTIONS requests
   .get("/version", () => json({ version: "0.1.0" }))
-  .get("/", getLog)
+  .get("/", authorize)
   .all("*", () => missing("Are you sure about that?"));
 
-export default {
-  fetch: (...args) =>
-    router
+export default function fetch(...args) {
+  return router
       .handle(...args)
       .catch(err => error(500, err.stack))
 //      .then(corsify)
-};
-
-addEventListener("fetch", event => {
-  event.respondWith(getLog(event.request));
-});
+}
 
 /**
  * Respond to the request
