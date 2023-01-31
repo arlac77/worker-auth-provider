@@ -13,6 +13,11 @@
     "lint": "npm run lint:docs",
     "lint:docs": "documentation lint ./src/**/*.mjs"
   },
+  "dependencies": {
+    "itty-cors": "^0.3.5",
+    "itty-router": "^3.0.11",
+    "itty-router-extras": "^0.4.2"
+  },
   "devDependencies": {
     "ava": "^5.1.1",
     "c8": "^7.12.0",
@@ -33,10 +38,5 @@
       "arlac77/template-esm-only",
       "arlac77/template-wrangler"
     ]
-  },
-  "dependencies": {
-    "itty-cors": "^0.3.5",
-    "itty-router": "^3.0.11",
-    "itty-router-extras": "^0.4.2"
   }
 }
