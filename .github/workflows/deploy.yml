@@ -13,7 +13,4 @@ jobs:
         with:
           node-version: 18.3.0
           cache: npm
-      - name: Publish
-        uses: cloudflare/wrangler-action@2.0.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      - run: npm run publish
