@@ -13,4 +13,5 @@ jobs:
         with:
           node-version: 18.3.0
           cache: npm
+      - run: npm ci  
       - run: npm run publish
