@@ -1,6 +1,7 @@
 import { Router } from "itty-router";
 import { error, json, missing } from "itty-router-extras";
 import { createCors } from "itty-cors";
+import { authorize } from "./authorize.mjs";
 
 //const { preflight, corsify } = createCors();
 
@@ -8,7 +9,7 @@ const router = Router();
 
 router
   //  .all("*", preflight) // handle CORS preflight/OPTIONS requests
-  .get("/version", () => json({ version: "0.1.0" }))
+  .get("/version", () => json({ version: "0.2.0" }))
   .post("/", authorize)
   .all("*", () => missing("Are you sure about that?"));
 
@@ -20,11 +21,3 @@ export default {
    //   .then(corsify);
   }
 };
-
-/**
- * Respond to the request
- * @param {Request} request
- */
-async function authorize(request) {
-  return new Response({ access_token: "token" }, { status: 200 });
-}
