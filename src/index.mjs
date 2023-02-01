@@ -17,7 +17,7 @@ export default {
     return router
       .handle(...args)
       .catch(err => error(500, err.stack))
-      .then(corsify);
+   //   .then(corsify);
   }
 };
 
