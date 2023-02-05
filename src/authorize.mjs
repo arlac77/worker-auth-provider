@@ -3,5 +3,9 @@
  * @param {Request} request
  */
 export async function authorize(request) {
-  return new Response({ access_token: "token" }, { status: 200 });
+  const scope = ["a", "b", "c"].join(",");
+  return new Response(
+    { scope, token_type: "bearer", access_token: "token" },
+    { status: 200 }
+  );
 }

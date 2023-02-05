@@ -7,9 +7,10 @@ const { preflight, corsify } = createCors({ allowOrigin: "*" });
 
 const router = Router();
 
+
 router
-  .all("*", preflight) // handle CORS preflight/OPTIONS requests
-  .get("/version", () => json({ version: "0.3.0" }))
+  .all("*", preflight)
+  .get("/version", () => json({ version: "0.4.0" }))
   .post("/", authorize)
   .all("*", () => missing("Are you sure about that?"));
 
