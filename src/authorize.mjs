@@ -4,8 +4,7 @@ const secret = "sasffaFAFA35";
 const header = { alg: "HS256", typ: "JWT" };
 
 function encode(data) {
-  const encoder = new TextEncoder();
-  return btoa(encoder.encode(JSON.stringify(data)));
+  return btoa(JSON.stringify(data));
 }
 
 function sign(header, user, secret) {
