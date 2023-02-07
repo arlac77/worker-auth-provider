@@ -1,4 +1,5 @@
 import sha256 from "crypto-js/sha256";
+import jwt from "@tsndr/cloudflare-worker-jwt";
 
 const secret = "sasffaFAFA35";
 const header = { alg: "HS256", typ: "JWT" };
