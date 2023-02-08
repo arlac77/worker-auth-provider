@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@tsndr/cloudflare-worker-jwt": "^2.2.1",
-    "crypto-js": "^4.1.1",
     "itty-cors": "^0.3.5",
     "itty-router": "^3.0.11",
     "itty-router-extras": "^0.4.2"
