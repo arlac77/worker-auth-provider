@@ -7,14 +7,16 @@ const secret = "sasffaFAFA35";
  * @param {Request} request
  */
 export async function authorize(request) {
-  const scope = ["a", "b", "c"].join(",");
+  const entitlements = ["a", "b", "c"].join(",");
 
-  const access_token = jwt.sign({ username }, secret, {
-    expiresIn: "2h"
-  });
+  const access_token = jwt.sign({
+     username,
+     entitlements,
+     exp: Math.floor(Date.now() / 1000) + (2 * (60 * 60))
+   }, secret);
 
   return new Response(
-    { scope, token_type: "bearer", access_token },
+    { token_type: "bearer", access_token },
     { status: 200 }
   );
 }

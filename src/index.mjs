@@ -10,7 +10,7 @@ const router = Router();
 
 router
   .all("*", preflight)
-  .get("/version", () => json({ version: "0.4.0" }))
+  .get("/version", () => json({ version: "0.5.0" }))
   .post("/", authorize)
   .all("*", () => missing("Are you sure about that?"));
 
