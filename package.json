@@ -15,10 +15,10 @@
     "lint:docs": "documentation lint ./src/**/*.mjs"
   },
   "dependencies": {
-    "@tsndr/cloudflare-worker-jwt": "^2.2.1",
-    "itty-cors": "^0.3.5",
-    "itty-router": "^3.0.11",
-    "itty-router-extras": "^0.4.2"
+    "@tsndr/cloudflare-worker-jwt": "^2.3.2",
+    "itty-cors": "^0.3.6",
+    "itty-router": "^4.0.26",
+    "itty-router-extras": "^0.4.5"
   },
   "devDependencies": {
     "ava": "^6.0.1",
