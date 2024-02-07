@@ -37,7 +37,7 @@
   "homepage": "https://github.com/arlac77/worker-auth-provider#readme",
   "template": {
     "inheritFrom": [
-      "arlac77/template-esm-only",
+      "arlac77/template-javascript-component",
       "arlac77/template-wrangler"
     ]
   }
