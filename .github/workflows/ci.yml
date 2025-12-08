@@ -16,7 +16,6 @@ jobs:
       - uses: actions/setup-node@v4.1.0
         with:
           node-version: 20.15.0
-          cache-dependency-path: package-lock.json
       - name: release
         run: npx semantic-release
         env:
